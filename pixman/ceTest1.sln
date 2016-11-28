@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pixman", "pixman\pixman.vcproj", "{7FBA5B63-DE94-4030-803E-BBD7AAA382ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|YC210SDK (ARMV4I) = Debug|YC210SDK (ARMV4I)
+		Release|YC210SDK (ARMV4I) = Release|YC210SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FBA5B63-DE94-4030-803E-BBD7AAA382ED}.Debug|YC210SDK (ARMV4I).ActiveCfg = Debug|YC210SDK (ARMV4I)
+		{7FBA5B63-DE94-4030-803E-BBD7AAA382ED}.Debug|YC210SDK (ARMV4I).Build.0 = Debug|YC210SDK (ARMV4I)
+		{7FBA5B63-DE94-4030-803E-BBD7AAA382ED}.Debug|YC210SDK (ARMV4I).Deploy.0 = Debug|YC210SDK (ARMV4I)
+		{7FBA5B63-DE94-4030-803E-BBD7AAA382ED}.Release|YC210SDK (ARMV4I).ActiveCfg = Release|YC210SDK (ARMV4I)
+		{7FBA5B63-DE94-4030-803E-BBD7AAA382ED}.Release|YC210SDK (ARMV4I).Build.0 = Release|YC210SDK (ARMV4I)
+		{7FBA5B63-DE94-4030-803E-BBD7AAA382ED}.Release|YC210SDK (ARMV4I).Deploy.0 = Release|YC210SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
