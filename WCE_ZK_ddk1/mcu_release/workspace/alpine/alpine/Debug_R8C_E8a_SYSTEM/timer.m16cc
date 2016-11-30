@@ -1,0 +1,5 @@
+-c
+-finfo
+-dir "C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM"
+-R8C
+"C:\WorkSpace\alpine\alpine\timer.c"

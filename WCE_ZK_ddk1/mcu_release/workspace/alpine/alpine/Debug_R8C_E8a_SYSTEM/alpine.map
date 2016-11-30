@@ -1,0 +1,517 @@
+##########################################
+# (1) LINK INFORMATION                   #
+##########################################
+c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\bin\ln30.exe @C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\alpine.m16cl
+
+# ID CODE DATA
+.ID  "#AABBCCDDEEFFFF"
+
+# OPTION FUNCTION SELECT REGISTER
+.OFSREG  FFH
+
+# LINK FILE INFORMATION
+ncrt0 (C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\ncrt0.r30)
+	May 27 17:04:45 2013
+
+Createc (C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\Createc.r30)
+	Sep 10 15:46:56 2013
+
+iic (C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\iic.r30)
+	Sep  9 16:52:03 2013
+
+timer (C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\timer.r30)
+	Sep 10 15:37:22 2013
+
+init (c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\lib30\r8clib.lib)
+	Feb 15 20:26:46 2007
+
+mdata (c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\lib30\r8clib.lib)
+	Feb 15 20:26:49 2007
+
+device (c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\lib30\r8clib.lib)
+	Feb 15 20:26:36 2007
+
+
+##########################################
+# (2) SECTION INFORMATION                #
+##########################################
+# SECTION                        ATR TYPE    START  LENGTH ALIGN MODULENAME
+data_SE                          ABS DATA    000400 000000       ncrt0
+bss_SE                           REL DATA    000400 000000 2     ncrt0
+data_SO                          REL DATA    000400 000000       ncrt0
+bss_SO                           REL DATA    000400 000000       ncrt0
+data_NE                          REL DATA    000400 000000 2     ncrt0
+                                 REL DATA    000400 000132 2     Createc
+                                 REL DATA    000532 000020 2     timer
+                                 REL DATA    000552 00000C 2     mdata
+bss_NE                           REL DATA    00055E 000000 2     ncrt0
+                                 REL DATA    00055E 00003C 2     init
+                                 REL DATA    00059A 000006 2     mdata
+data_NO                          REL DATA    0005A0 000000       ncrt0
+                                 REL DATA    0005A0 000021       Createc
+bss_NO                           REL DATA    0005C1 000000       ncrt0
+                                 REL DATA    0005C1 000001       Createc
+                                 REL DATA    0005C2 000004       device
+stack                            REL DATA    0005C6 000100 2     ncrt0
+heap                             REL DATA    0006C6 000080       ncrt0
+rom_NE                           ABS ROMDATA 004000 000000       ncrt0
+                                 REL ROMDATA 004000 000100 2     Createc
+rom_NO                           REL ROMDATA 004100 000000       ncrt0
+                                 REL ROMDATA 004100 000017       Createc
+data_SEI                         REL ROMDATA 004118 000000 2     ncrt0
+data_SOI                         REL ROMDATA 004118 000000       ncrt0
+data_NEI                         REL ROMDATA 004118 000000 2     ncrt0
+                                 REL ROMDATA 004118 000132       Createc
+                                 REL ROMDATA 00424A 000020       timer
+                                 REL ROMDATA 00426A 00000C       mdata
+data_NOI                         REL ROMDATA 004276 000000       ncrt0
+                                 REL ROMDATA 004276 000021       Createc
+program                          REL CODE    004298 000000 2     ncrt0
+                                 REL CODE    004298 001529 2     Createc
+                                 REL CODE    0057C2 00031D 2     iic
+                                 REL CODE    005AE0 000079 2     timer
+                                 REL CODE    005B5A 00009D 2     init
+                                 REL CODE    005BF8 000104 2     device
+interrupt                        REL CODE    005CFC 000000 2     ncrt0
+                                 REL CODE    005CFC 0000A1       ncrt0
+vector                           ABS ROMDATA 00FEDC 000100       ncrt0
+fvector                          ABS ROMDATA 00FFDC 000024       ncrt0
+# Total -------------------------------------------------------------------
+                                     DATA           000346(0000838) Byte(s)
+                                     ROMDATA        0003BA(0000954) Byte(s)
+                                     CODE           001B05(0006917) Byte(s)
+
+##########################################
+# (3) GLOBAL LABEL INFORMATION           #
+##########################################
+$CheckButton       005466  $CheckKey          005412  $GetKeyValue       0053b8
+$HandlerArmCMD     004a84  $SendArmData       004390  $_pput             005cc2
+$_sput             005ca8  $delay_ms          004298  $delay_ra          004d5a
+$delay_us          0057c2  $exit              005d9a  $i2cGetbyte        00587a
+$i2cPutbyte        0057d6  $i2cRead           005ac6  $i2cReceive        005914
+$i2cSend           005a10  $i2cWrite          005aac  $init_dev          005bf8
+$kill_timer        005b48  $set_timer         005b1c  $speed             005c0c
+$wait_timer        005b32  _ACCCheck          00460c  _AD1KeyCheck       004740
+_AD2KeyCheck       004818  _ButtValue         00410b  _CarStatusCheck    0046ae
+_CheckACC          004402  _CheckPowerOffRe   004460  _ConfigureFreq     004c16
+_DownKeyst         0005a4  _FeedDog           0054f8  _FeedDog1          005504
+_GetFSV            00538c  _HandlerIRCode     004a4c  _I2CInit           005902
+_IRADDRESS         00051e  _IRCODE            000404  _InitMemMap        004b18
+_Initialize        004c04  _IrDevice          0005a8  _IrUse             0005a9
+_KEY               004112  _KeyMap            004000  _KeyValue          004100
+_MemMap            00041c  _PortConfigure     004c40  _PowerKeyCheck     00449c
+_Power_Chip_Hold   005674  _PulseIR           0057be  _PulseMcu          005588
+_Read_Power_Chip   0055cc  _ResetArm          0055aa  _ResetMCU          005528
+_SendDVDIRCode     0042fc  _SendTVIRCode      0042ba  _SfrInit           004cbe
+_TestFun           0057c0  _TickCount         000400  _Wheel1KeyCheck    0048d4
+_Wheel2KeyCheck    00498e  _WheelKeyFlag1     0005a2  _WheelKeyFlag2     0005a3
+_WheelKeyLevel1    00040c  _WheelKeyLevel2    000410  _WheelKeyTotal1    00040e
+_WheelKeyTotal2    000412  _WheelTimes        000414  _WheelTimes2       000416
+__init             005b5a  __iob              00055e  __memt             000558
+__mnext            00059a  __msize            00059c  __pa_vct           0005c3
+__pb_vct           0005c5  __pool             000552  __porta            0005c2
+__portb            0005c4  __sget             005c98  _check_power_chi   00041a
+_check_power_nor   005618  _custom_code       000520  _exit              005d9a
+_flag              0005b1  _global_timer      000532  _handler_timer     005ae0
+_i2cInit           004c84  _iic_irq           004dae  _int1_irq          004f34
+_ir_code           000522  _ir_count_n        000408  _ir_count_p        00040a
+_ir_last_code      000524  _ir_level          0005b2  _ir_send_status    0005a0
+_key_irq           004f2e  _main              004b44  _mcu_reset_flag    0005a1
+_power_chip_3681   000418  _power_status      0005c1  _powerdown_delay   000406
+_ra_irq            004d82  _rb_irq            004f56  _rc_irq            005382
+_rotateKey1        0005aa  _rotateKey2        0005ab  _rotateKey3        0005ac
+_rotateKey4        0005ad  _rotateStatus1     0005ae  _rotateStatus2     0005af
+_sub               0043a8  _subaddr           0005a5  _subflag           0005a6
+_uErrorCode        0005a7  _uTestTimes        00051c  _unit_type         0005b0
+_wdt_init          00550c  dummy_int          005d9c  start              005cfc
+
+##########################################
+# (4) GLOBAL EQU SYMBOL INFORMATION      #
+##########################################
+__SB__           00000400  
+
+##########################################
+# (5) GLOBAL EQU BIT-SYMBOL INFORMATION  #
+##########################################
+
+##########################################
+# (6) LOCAL LABEL INFORMATION            #
+##########################################
+@ ncrt0 ( C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\ncrt0.r30 )
+@ Createc ( C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\Createc.r30 )
+@ iic ( C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\iic.r30 )
+@ timer ( C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\timer.r30 )
+@ init ( c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\lib30\r8clib.lib )
+@ mdata ( c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\lib30\r8clib.lib )
+@ device ( c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\lib30\r8clib.lib )
+
+##########################################
+# (7) LOCAL EQU SYMBOL INFORMATION       #
+##########################################
+@ ncrt0 ( C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\ncrt0.r30 )
+@ Createc ( C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\Createc.r30 )
+@ iic ( C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\iic.r30 )
+@ timer ( C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\timer.r30 )
+@ init ( c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\lib30\r8clib.lib )
+@ mdata ( c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\lib30\r8clib.lib )
+@ device ( c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\lib30\r8clib.lib )
+
+##########################################
+# (8) LOCAL EQU BIT-SYMBOL INFORMATION   #
+##########################################
+@ ncrt0 ( C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\ncrt0.r30 )
+@ Createc ( C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\Createc.r30 )
+@ iic ( C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\iic.r30 )
+@ timer ( C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\timer.r30 )
+@ init ( c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\lib30\r8clib.lib )
+@ mdata ( c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\lib30\r8clib.lib )
+@ device ( c:\program files\renesas\hew\tools\renesas\nc30wa\v543r00\lib30\r8clib.lib )
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+data_SE
+                                  00000400  00000400         0   1
+bss_SE
+                                  00000400  00000400         0   2
+data_SO
+                                  00000400  00000400         0   1
+bss_SO
+                                  00000400  00000400         0   1
+data_NE
+                                  00000400  0000055d       15e   2
+bss_NE
+                                  0000055e  0000059f        42   2
+data_NO
+                                  000005a0  000005c0        21   1
+bss_NO
+                                  000005c1  000005c5         5   1
+stack
+                                  000005c6  000006c5       100   2
+heap
+                                  000006c6  00000745        80   1
+rom_NE
+                                  00004000  000040ff       100   1
+rom_NO
+                                  00004100  00004116        17   1
+data_SEI
+                                  00004118  00004118         0   2
+data_SOI
+                                  00004118  00004118         0   1
+data_NEI
+                                  00004118  00004275       15e   2
+data_NOI
+                                  00004276  00004296        21   1
+program
+                                  00004298  00005cfb      1a64   2
+interrupt
+                                  00005cfc  00005d9c        a1   2
+vector
+                                  0000fedc  0000ffdb       100   1
+fvector
+                                  0000ffdc  0000ffff        24   1
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=data_SE
+FILE=ncrt0
+                                  00000400  00000400         0
+  __SB__
+                                  00000400         0   none ,g         0
+
+SECTION=data_NE
+FILE=C:/WorkSpace/alpine/alpine/Createc
+                                  00000400  00000531       132
+  _TickCount
+                                  00000400         4   data ,g         0
+  _IRCODE
+                                  00000404         2   data ,g         0
+  _powerdown_delay
+                                  00000406         2   data ,g         0
+  _ir_count_n
+                                  00000408         2   data ,g         0
+  _ir_count_p
+                                  0000040a         2   data ,g         0
+  _WheelKeyLevel1
+                                  0000040c         2   data ,g         0
+  _WheelKeyTotal1
+                                  0000040e         2   data ,g         0
+  _WheelKeyLevel2
+                                  00000410         2   data ,g         0
+  _WheelKeyTotal2
+                                  00000412         2   data ,g         0
+  _WheelTimes
+                                  00000414         2   data ,g         0
+  _WheelTimes2
+                                  00000416         2   data ,g         0
+  _power_chip_3681_hold_time
+                                  00000418         2   data ,g         0
+  _check_power_chip_3681_time
+                                  0000041a         2   data ,g         0
+  _MemMap
+                                  0000041c       100   data ,g         0
+  _uTestTimes
+                                  0000051c         2   data ,g         0
+  _IRADDRESS
+                                  0000051e         2   data ,g         0
+  _custom_code
+                                  00000520         2   data ,g         0
+  _ir_code
+                                  00000522         2   data ,g         0
+  _ir_last_code
+                                  00000524         2   data ,g         0
+
+FILE=C:/WorkSpace/alpine/alpine/timer
+                                  00000532  00000551        20
+  _global_timer
+                                  00000532        20   data ,g         0
+
+FILE=mdata
+                                  00000552  0000055d         c
+  __memt
+                                  00000558         0   none ,g         0
+  __pool
+                                  00000552         0   none ,g         0
+
+SECTION=bss_NE
+FILE=ncrt0
+                                  0000055e  0000055e         0
+  __iob
+                                  0000055e         0   none ,g         0
+
+FILE=mdata
+                                  0000059a  0000059f         6
+  __mnext
+                                  0000059a         0   none ,g         0
+  __msize
+                                  0000059c         0   none ,g         0
+
+SECTION=data_NO
+FILE=ncrt0
+                                  000005a0  000005a0         0
+  _ir_send_status
+                                  000005a0         1   data ,g         0
+
+FILE=C:/WorkSpace/alpine/alpine/Createc
+                                  000005a0  000005c0        21
+  _mcu_reset_flag
+                                  000005a1         1   data ,g         0
+  _WheelKeyFlag1
+                                  000005a2         1   data ,g         0
+  _WheelKeyFlag2
+                                  000005a3         1   data ,g         0
+  _DownKeyst
+                                  000005a4         1   data ,g         0
+  _subaddr
+                                  000005a5         1   data ,g         0
+  _subflag
+                                  000005a6         1   data ,g         0
+  _uErrorCode
+                                  000005a7         1   data ,g         0
+  _IrDevice
+                                  000005a8         1   data ,g         0
+  _IrUse
+                                  000005a9         1   data ,g         0
+  _rotateKey1
+                                  000005aa         1   data ,g         0
+  _rotateKey2
+                                  000005ab         1   data ,g         0
+  _rotateKey3
+                                  000005ac         1   data ,g         0
+  _rotateKey4
+                                  000005ad         1   data ,g         0
+  _rotateStatus1
+                                  000005ae         1   data ,g         0
+  _rotateStatus2
+                                  000005af         1   data ,g         0
+  _unit_type
+                                  000005b0         1   data ,g         0
+  _flag
+                                  000005b1         1   data ,g         0
+  _ir_level
+                                  000005b2         1   data ,g         0
+
+SECTION=bss_NO
+FILE=ncrt0
+                                  000005c1  000005c1         0
+  _power_status
+                                  000005c1         1   data ,g         0
+
+FILE=device
+                                  000005c2  000005c5         4
+  __pa_vct
+                                  000005c3         0   none ,g         0
+  __pb_vct
+                                  000005c5         0   none ,g         0
+  __porta
+                                  000005c2         0   none ,g         0
+  __portb
+                                  000005c4         0   none ,g         0
+
+SECTION=rom_NE
+FILE=C:/WorkSpace/alpine/alpine/Createc
+                                  00004000  000040ff       100
+  _KeyMap
+                                  00004000       100   data ,g         0
+
+SECTION=rom_NO
+FILE=C:/WorkSpace/alpine/alpine/Createc
+                                  00004100  00004116        17
+  _KEY
+                                  00004112         5   data ,g         0
+  _KeyValue
+                                  00004100         b   data ,g         0
+  _ButtValue
+                                  0000410b         7   data ,g         0
+
+SECTION=program
+FILE=C:/WorkSpace/alpine/alpine/Createc
+                                  00004298  000057c0      1529
+  $delay_ms
+                                  00004298        22   func ,g         0
+  _SendTVIRCode
+                                  000042ba        41   func ,g         0
+  _SendDVDIRCode
+                                  000042fc        94   func ,g         0
+  $SendArmData
+                                  00004390        18   func ,g         0
+  _sub
+                                  000043a8        5a   func ,g         0
+  _CheckACC
+                                  00004402        5f   func ,g         0
+  _CheckPowerOffReason
+                                  00004460        3c   func ,g         0
+  _PowerKeyCheck
+                                  0000449c       16f   func ,g         0
+  _ACCCheck
+                                  0000460c        a3   func ,g         0
+  _CarStatusCheck
+                                  000046ae        91   func ,g         0
+  _AD1KeyCheck
+                                  00004740        d8   func ,g         0
+  _AD2KeyCheck
+                                  00004818        bd   func ,g         0
+  _Wheel1KeyCheck
+                                  000048d4        ba   func ,g         0
+  _Wheel2KeyCheck
+                                  0000498e        be   func ,g         0
+  _HandlerIRCode
+                                  00004a4c        38   func ,g         0
+  $HandlerArmCMD
+                                  00004a84        93   func ,g         0
+  _InitMemMap
+                                  00004b18        2c   func ,g         0
+  _main
+                                  00004b44        c1   func ,g         0
+  _Initialize
+                                  00004c04        12   func ,g         0
+  _ConfigureFreq
+                                  00004c16        2a   func ,g         0
+  _PortConfigure
+                                  00004c40        44   func ,g         0
+  _i2cInit
+                                  00004c84        3a   func ,g         0
+  _SfrInit
+                                  00004cbe        9b   func ,g         0
+  $delay_ra
+                                  00004d5a        29   func ,g         0
+  _ra_irq
+                                  00004d82        2c   func ,g         0
+  _iic_irq
+                                  00004dae       17f   func ,g         0
+  _key_irq
+                                  00004f2e         6   func ,g         0
+  _int1_irq
+                                  00004f34        22   func ,g         0
+  _rb_irq
+                                  00004f56       42d   func ,g         0
+  _rc_irq
+                                  00005382         9   func ,g         0
+  _GetFSV
+                                  0000538c        2c   func ,g         0
+  $GetKeyValue
+                                  000053b8        5a   func ,g         0
+  $CheckKey
+                                  00005412        54   func ,g         0
+  $CheckButton
+                                  00005466        93   func ,g         0
+  _FeedDog
+                                  000054f8         c   func ,g         0
+  _FeedDog1
+                                  00005504         8   func ,g         0
+  _wdt_init
+                                  0000550c        1b   func ,g         0
+  _ResetMCU
+                                  00005528        60   func ,g         0
+  _PulseMcu
+                                  00005588        23   func ,g         0
+  _ResetArm
+                                  000055aa        22   func ,g         0
+  _Read_Power_Chip_VDD12_Pin
+                                  000055cc        4c   func ,g         0
+  _check_power_normal
+                                  00005618        5c   func ,g         0
+  _Power_Chip_Hold
+                                  00005674       149   func ,g         0
+  _PulseIR
+                                  000057be         2   func ,g         0
+
+FILE=C:/WorkSpace/alpine/alpine/iic
+                                  000057c2  00005ade       31d
+  $delay_us
+                                  000057c2        13   func ,g         0
+  $i2cPutbyte
+                                  000057d6        a5   func ,g         0
+  $i2cGetbyte
+                                  0000587a        87   func ,g         0
+  _I2CInit
+                                  00005902        12   func ,g         0
+  $i2cReceive
+                                  00005914        fd   func ,g         0
+  $i2cSend
+                                  00005a10        9b   func ,g         0
+  $i2cWrite
+                                  00005aac        1a   func ,g         0
+
+FILE=C:/WorkSpace/alpine/alpine/timer
+                                  00005ae0  00005b58        79
+  _handler_timer
+                                  00005ae0        3c   func ,g         0
+  $set_timer
+                                  00005b1c        15   func ,g         0
+  $wait_timer
+                                  00005b32        16   func ,g         0
+
+FILE=init
+                                  00005b5a  00005bf6        9d
+  __init
+                                  00005b5a        9d   func ,g         0
+
+FILE=device
+                                  00005bf8  00005cfb       104
+  $init_dev
+                                  00005bf8        13   func ,g         0
+  $speed
+                                  00005c0c        8d   func ,g         0
+  __sget
+                                  00005c98         f   func ,g         0
+  $_sput
+                                  00005ca8        1b   func ,g         0
+  $_pput
+                                  00005cc2        3a   func ,g         0
+
+SECTION=interrupt
+FILE=ncrt0
+                                  00005cfc  00005d9c        a1
+  $exit
+                                  00005d9a         0   none ,g         0
+  _exit
+                                  00005d9a         0   none ,g         0
+  dummy_int
+                                  00005d9c         0   none ,g         0
+

@@ -1,0 +1,9 @@
+-L "r8clib"
+-G
+-MS
+-O "C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\alpine.x30"
+-R8C
+"C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\ncrt0.r30"
+"C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\Createc.r30"
+"C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\iic.r30"
+"C:\WorkSpace\alpine\alpine\Debug_R8C_E8a_SYSTEM\timer.r30"

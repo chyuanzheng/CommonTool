@@ -1,0 +1,82 @@
+!IF "$(_WINCEOSVER)"=="700"
+_COMMONPUBROOT=$(SG_OUTPUT_ROOT)
+!ELSE
+_COMMONPUBROOT=$(_PROJECTROOT)\cesysgen
+!ENDIF
+
+WINCEREL=1
+RELEASETYPE=LOCAL
+_ISVINCPATH=$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;
+FILE_VIEW_ROOT_FOLDER= \
+  prelink.bat \
+  postlink.bat \
+
+FILE_VIEW_RESOURCE_FOLDER= \
+
+FILE_VIEW_INCLUDES_FOLDER= \
+    Virtual.h \
+    iTCCVersionInformation.h \
+    PhysicalAddress.h \
+    pkfuncs.h \
+    Shared.h \
+    Thread.h \
+    toolhelp.h \
+    INCLUDE\Clock.H \
+    INCLUDE\TCC_IoCtlCode.H \
+    INCLUDE\windev.h \
+    Debug.h \
+    image.h \
+    T5mp4.h \
+    TCC78xPhysical.h \
+    TCC78xRegStructure.h \
+    TCC78xWince.h \
+    TCC79x_Physical.h \
+    TCC79x_Structures.h \
+    TCCUtil.h \
+    Typedefine.h \
+    VideoCore.h \
+    MailBox.h \
+    include\ioctl_pwrstr.h \
+    include\globals_TCC88x.h \
+    include\globals_TCC89x.h \
+    include\globals.h \
+
+SOURCES= \
+    Thread.cpp \
+    Virtual.cpp \
+    Debug.cpp \
+    image.cpp \
+    TCCUtil.cpp \
+    MailBox.cpp \
+    VideoCore.cpp \
+    Clock_TCC79x.cpp \
+    Clock_TCCxxx.cpp \
+
+INCLUDES= \
+  $(_WINCEROOT)\others\atl\include; \
+  $(SG_OUTPUT_ROOT)\sdk\inc; \
+  $(_WINCEROOT)\public\common\oak\inc; \
+  $(_WINCEROOT)\public\common\ddk\inc; \
+
+TARGETTYPE=LIBRARY
+MFC=1
+POSTLINK_PASS_CMD=postlink.bat
+PRELINK_PASS_CMD=prelink.bat
+FILE_VIEW_PARAMETER_FOLDER= \
+  ProjSysgen.bat \
+
+!IF "$(TCC79X)" == "1"
+CDEFINES=$(CDEFINES) -D__TCC79XX_WINCE__
+TARGETNAME=tcw_TCC79x
+!ELSEIF "$(TCC89X)" == "1"
+CDEFINES=$(CDEFINES) -D__TCC89XX_WINCE__ -DCKC_DRIVER_INCLUDE
+TARGETNAME=tcw_TCC89x
+!ELSEIF "$(TCC88X)" == "1"
+CDEFINES=$(CDEFINES) -D__TCC88XX_WINCE__ -DCKC_DRIVER_INCLUDE
+TARGETNAME=tcw_TCC88x
+!ELSE
+CDEFINES=$(CDEFINES) -D__TCC7801_WINCE__
+TARGETNAME=tcw
+!ENDIF
+

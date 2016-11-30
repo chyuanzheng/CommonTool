@@ -1,0 +1,240 @@
+# Microsoft eMbedded Visual Tools Project File - Name="tcw" - Package Owner=<4>
+# Microsoft eMbedded Visual Tools Generated Build File, Format Version 6.02
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (WCE ARMV4I) Static Library" 0xa504
+
+CFG=tcw - Win32 (WCE ARMV4I) Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "tcw.vcn".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "tcw.vcn" CFG="tcw - Win32 (WCE ARMV4I) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "tcw - Win32 (WCE ARMV4I) Release" (based on "Win32 (WCE ARMV4I) Static Library")
+!MESSAGE "tcw - Win32 (WCE ARMV4I) Debug" (based on "Win32 (WCE ARMV4I) Static Library")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+# PROP ATL_Project 2
+CPP=clarm.exe
+
+!IF  "$(CFG)" == "tcw - Win32 (WCE ARMV4I) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMV4IRel"
+# PROP BASE Intermediate_Dir "ARMV4IRel"
+# PROP BASE CPU_ID "{DC70F430-E78B-494F-A9D5-62ADC56443B8}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMV4IRel"
+# PROP Intermediate_Dir "ARMV4IRel"
+# PROP CPU_ID "{DC70F430-E78B-494F-A9D5-62ADC56443B8}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "ARM" /D "_ARM_" /D "$(CePlatform)" /D "ARMV4I" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_LIB" /YX /QRarch4T /QRinterwork-return /O2 /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /I "." /D _WIN32_WCE=$(CEVersion) /D "ARM" /D "_ARM_" /D "$(CePlatform)" /D "ARMV4I" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_LIB" /D "__TCC7801_WINCE__" /FAcs /YX /QRarch4T /QRinterwork-return /O2 /M$(CECrtMT) /c
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+
+!ELSEIF  "$(CFG)" == "tcw - Win32 (WCE ARMV4I) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "ARMV4IDbg"
+# PROP BASE Intermediate_Dir "ARMV4IDbg"
+# PROP BASE CPU_ID "{DC70F430-E78B-494F-A9D5-62ADC56443B8}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "ARMV4IDbg"
+# PROP Intermediate_Dir "ARMV4IDbg"
+# PROP CPU_ID "{DC70F430-E78B-494F-A9D5-62ADC56443B8}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "ARM" /D "_ARM_" /D "$(CePlatform)" /D "ARMV4I" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_LIB" /YX /QRarch4T /QRinterwork-return /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /I "." /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "ARM" /D "_ARM_" /D "$(CePlatform)" /D "ARMV4I" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_LIB" /FR /YX /QRarch4T /QRinterwork-return /M$(CECrtMTDebug) /c
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+
+!ENDIF 
+
+# Begin Target
+
+# Name "tcw - Win32 (WCE ARMV4I) Release"
+# Name "tcw - Win32 (WCE ARMV4I) Debug"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=.\Clock.cpp
+DEP_CPP_CLOCK=\
+	".\include\Clock.H"\
+	".\include\pkfuncs.h"\
+	".\include\TCC_IoCtlCode.H"\
+	".\include\windev.h"\
+	".\toolhelp.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Debug.cpp
+DEP_CPP_DEBUG=\
+	".\Debug.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\image.cpp
+DEP_CPP_IMAGE=\
+	".\image.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\MailBox.cpp
+DEP_CPP_MAILB=\
+	".\include\Clock.H"\
+	".\MailBox.h"\
+	".\pkfuncs.h"\
+	".\TCC78xPhysical.h"\
+	".\TCC79x_Physical.h"\
+	".\TCCUtil.h"\
+	".\toolhelp.h"\
+	".\Virtual.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\TCCUtil.cpp
+DEP_CPP_TCCUT=\
+	".\TCCUtil.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Thread.cpp
+DEP_CPP_THREA=\
+	".\Thread.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\VideoCore.cpp
+DEP_CPP_VIDEO=\
+	".\pkfuncs.h"\
+	".\TCC78xPhysical.h"\
+	".\TCC79x_Physical.h"\
+	".\TCCUtil.h"\
+	".\toolhelp.h"\
+	".\VideoCore.h"\
+	".\Virtual.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Virtual.cpp
+DEP_CPP_VIRTU=\
+	".\pkfuncs.h"\
+	".\toolhelp.h"\
+	".\Virtual.h"\
+	{$(INCLUDE)}"CeBus.h"\
+	{$(INCLUDE)}"ceddk.h"\
+	{$(INCLUDE)}"ddkmacro.h"\
+	{$(INCLUDE)}"ntstatus.h"\
+	{$(INCLUDE)}"pm.h"\
+	
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=.\Debug.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\image.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\MailBox.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\PhysicalAddress.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\pkfuncs.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\shared.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\T5MP4.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\TCC78xPhysical.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\TCC78xRegStructure.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\TCC78xWince.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\TCCUtil.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Thread.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\toolhelp.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Typedefine.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\VideoCore.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Virtual.h
+# End Source File
+# End Group
+# End Target
+# End Project
